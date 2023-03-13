@@ -60,12 +60,11 @@ class File {
             const columns = line.split(',')
             let user = {}
             for (const index in columns) {
-                user[header[index]] = columns[index]
+                user[header[index].trim()] = columns[index]
             }
-            console.log(user)
-            // return new User(user)
+            return new User(user)
         })
-        console.log('users: ', users)
+        return users
     }
 }
 

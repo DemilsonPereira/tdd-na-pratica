@@ -20,25 +20,25 @@ const { rejects, deepStrictEqual } = require('assert');
         const result = await File.csvToJson(filePath)
         const expected = [
             {
-                "id": 121,
                 "name": "Fulano da Silva",
+                "id": 121,
                 "profession": "JS Developer",
-                "age": 36
+                "birthDay": 1987
             },
             {
-                "id": 122,
                 "name": "Cicrano Oliveira",
+                "id": 122,
                 "profession": "Administradora",
-                "age": 31
+                "birthDay": 1992
             },
             {
-                "id": 321,
                 "name": "Joazinho",
+                "id": 321,
                 "profession": "Python Developer",
-                "age": 80
+                "birthDay": 1978
             }
         ]
         // Verifica o valor e a referencia
-        deepStrictEqual(result, expected)
+        deepStrictEqual(JSON.stringify(result), JSON.stringify(expected))
     }
 })()
