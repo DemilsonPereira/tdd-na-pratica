@@ -1,5 +1,5 @@
 const { readFile } = require('fs/promises')
-const { User } = require('./user')
+const User = require('./user')
 const { error } = require('./constants')
 
 const DEFAULT_OPTION = {
@@ -48,13 +48,11 @@ class File {
 
         }
 
-        return {
-            valid: true
-        }
+        return { valid: true }
     }
 
     static parseCSVToJSON(csvString) {
-        const lines = csvString.split('\n')
+        const lines = csvString.trim().split('\n')
         // remove o primeiro item e joga na variavel
         const firstLine = lines.shift()
         const header = firstLine.split(',')
@@ -64,8 +62,8 @@ class File {
             for (const index in columns) {
                 user[header[index]] = columns[index]
             }
-            // console.log(user)
-            return new User(user)
+            console.log(user)
+            // return new User(user)
         })
         console.log('users: ', users)
     }

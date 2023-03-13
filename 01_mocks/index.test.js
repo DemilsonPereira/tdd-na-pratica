@@ -21,13 +21,13 @@ const { rejects, deepStrictEqual } = require('assert');
         const expected = [
             {
                 "id": 121,
-                "name": "Demilson",
+                "name": "Fulano da Silva",
                 "profession": "JS Developer",
                 "age": 36
             },
             {
                 "id": 122,
-                "name": "Glenda Oliveira",
+                "name": "Cicrano Oliveira",
                 "profession": "Administradora",
                 "age": 31
             },
