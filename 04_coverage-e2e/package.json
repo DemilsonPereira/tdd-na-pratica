@@ -4,7 +4,7 @@
   "description": "",
   "main": "api.js",
   "scripts": {
-    "test": "npx mocha -w *.test.js",
+    "test": "npx mocha -w --parallel *.test.js",
     "test:cov": "npx nyc mocha --parallel *.test.js"
   },
   "keywords": [],
